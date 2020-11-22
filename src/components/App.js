@@ -9,11 +9,11 @@ const App = (props) => {
       case "prev":
         setIndex(index - 1);
         break;
-      case "Reset":
-        setIndex(0);
-        break;
       case "Next":
         setIndex(index + 1);
+        break;
+      case "Reset":
+        setIndex(0);
         break;
       default:
         return;
@@ -31,18 +31,18 @@ const App = (props) => {
         Prev
       </button>
       <button
-        data-testid="button-restart"
-        onClick={() => handleClick("Reset")}
-        disabled={index === 0}
-      >
-        Reset
-      </button>
-      <button
         data-testid="button-next"
         onClick={() => handleClick("Next")}
         disabled={index === slides.length - 1}
       >
         Next
+      </button>
+      <button
+        data-testid="button-restart"
+        onClick={() => handleClick("Reset")}
+        disabled={index === 0}
+      >
+        Restart
       </button>
     </>
   );
