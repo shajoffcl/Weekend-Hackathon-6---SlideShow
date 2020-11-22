@@ -7,21 +7,12 @@ const App = (props) => {
   const handleClick = (action) => {
     switch (action) {
       case "prev":
-        if (index === 0) {
-          return;
-        }
         setIndex(index - 1);
         break;
       case "Reset":
-        if (index === 0) {
-          return;
-        }
         setIndex(0);
         break;
       case "Next":
-        if (index === slides.length - 1) {
-          return;
-        }
         setIndex(index + 1);
         break;
       default:
